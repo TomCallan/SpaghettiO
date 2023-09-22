@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Text Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="O.jpg">
+</head>
+<body>
+    <header>
+        <h1>SpagghetiOh?</h1>
+    </header>
+    <main>
+        <h2>Upload a PDF File</h2>
+        <input type="file" id="pdfInput" accept=".pdf">
+        <button id="analyzeButton">Analyze PDF</button>
+        <div id="loading" style="display: none;">
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
+        <div id="result" class="result"></div>
+    </main>
+    <style>
+        /* Existing styles for the loader animation */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* New styles for the result */
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f3f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
